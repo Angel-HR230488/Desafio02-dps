@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import HomeScreen from "./src/screens/HomeScreen";
+import AddPieceScreen from "./src/screens/AddPieceScreen";
+
+// Se crea el stack navigator para manejar la navegación entre pantallas
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // Contenedor principal para la navegación
+    <NavigationContainer>
+      <Stack.Navigator>
+        {/* Pantalla principal: Historial de piezas */}
+        <Stack.Screen name="Menú" component={HomeScreen} />
+        {/* Pantalla para registrar una nueva pieza */}
+        <Stack.Screen name="Registrar Pieza" component={AddPieceScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
