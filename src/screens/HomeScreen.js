@@ -73,14 +73,81 @@ const HomeScreen = ({ navigation }) => {
 
 // Estilos para la pantalla
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20 },
-  title: { fontSize: 24, fontWeight: "bold", marginBottom: 10 },
-  noPieces: { fontSize: 18, color: "#777", textAlign: "center", marginVertical: 20 },
-  item: { flexDirection: "row", justifyContent: "space-between", padding: 10, borderBottomWidth: 1, borderColor: "#ddd" },
-  text: { fontSize: 16 },
-  boldText: { fontWeight: "bold" },
-  modalContainer: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0,0,0,0.5)", padding: 20 },
-  modalTitle: { fontSize: 20, fontWeight: "bold" },
+  container: { 
+    flex: 1, 
+    padding: 20, 
+    backgroundColor: "#f5f5f5" // Fondo claro para mejor contraste
+  },
+  title: { 
+    fontSize: 24, 
+    fontWeight: "bold", 
+    marginBottom: 20, 
+    textAlign: "center", 
+    color: "#333" // Color oscuro para el texto
+  },
+  noPieces: { 
+    fontSize: 18, 
+    color: "#888", 
+    textAlign: "center", 
+    marginVertical: 20 
+  },
+  item: { 
+    flexDirection: "row", 
+    justifyContent: "space-between", 
+    alignItems: "center", 
+    padding: 15, 
+    marginVertical: 8, 
+    backgroundColor: "#fff", 
+    borderRadius: 10, 
+    shadowColor: "#000", 
+    shadowOffset: { width: 0, height: 2 }, 
+    shadowOpacity: 0.1, 
+    shadowRadius: 4, 
+    elevation: 3 // Sombra para Android
+  },
+  text: { 
+    fontSize: 16, 
+    color: "#555" 
+  },
+  boldText: { 
+    fontWeight: "bold", 
+    fontSize: 16, 
+    color: "#333" 
+  },
+  modalContainer: { 
+    flex: 1, 
+    justifyContent: "center", 
+    alignItems: "center", 
+    backgroundColor: "rgba(0,0,0,0.5)", 
+    padding: 20 
+  },
+  modalTitle: { 
+    fontSize: 20, 
+    fontWeight: "bold", 
+    marginBottom: 10, 
+    color: "#fff" 
+  },
+  button: { 
+    backgroundColor: "#007BFF", 
+    padding: 10, 
+    borderRadius: 5, 
+    alignItems: "center", 
+    marginTop: 10 
+  },
+  buttonText: { 
+    color: "#fff", 
+    fontSize: 16, 
+    fontWeight: "bold" 
+  },
+  deleteButton: { 
+    backgroundColor: "red", 
+    padding: 10, 
+    borderRadius: 5 
+  },
+  deleteButtonText: { 
+    color: "#fff", 
+    fontSize: 14, 
+    fontWeight: "bold" 
+  }
 });
-
 export default HomeScreen;

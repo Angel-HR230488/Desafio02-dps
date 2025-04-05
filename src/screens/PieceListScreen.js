@@ -54,13 +54,70 @@ const PieceListScreen = ({ route }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20 },
-  item: { flexDirection: "row", justifyContent: "space-between", padding: 10, borderBottomWidth: 1, borderColor: "#ddd" },
-  text: { fontSize: 16 },
-  boldText: { fontWeight: "bold" },
-  modalContainer: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0,0,0,0.5)", padding: 20 },
-  modalTitle: { fontSize: 20, fontWeight: "bold" },
+const styles = StyleSheet.create({container: {
+  flex: 1,
+  padding: 20,
+  backgroundColor: "#f5f5f5", // Fondo claro para mejor contraste
+},
+item: {
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: 15,
+  marginVertical: 8,
+  backgroundColor: "#fff", // Fondo blanco para los elementos
+  borderRadius: 10, // Bordes redondeados
+  shadowColor: "#000", // Sombra para iOS
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.1,
+  shadowRadius: 4,
+  elevation: 3, // Sombra para Android
+},
+text: {
+  fontSize: 16,
+  color: "#555", // Texto gris oscuro
+},
+boldText: {
+  fontWeight: "bold",
+  fontSize: 16,
+  color: "#333", // Texto más oscuro para resaltar
+},
+modalContainer: {
+  flex: 1,
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "rgba(0,0,0,0.5)", // Fondo semitransparente para el modal
+  padding: 20,
+},
+modalTitle: {
+  fontSize: 20,
+  fontWeight: "bold",
+  marginBottom: 10,
+  color: "#fff", // Texto blanco para el título del modal
+},
+button: {
+  backgroundColor: "#007BFF", // Azul para los botones
+  padding: 10,
+  borderRadius: 8,
+  alignItems: "center",
+  marginTop: 10,
+},
+buttonText: {
+  color: "#fff", // Texto blanco para los botones
+  fontSize: 16,
+  fontWeight: "bold",
+},
+deleteButton: {
+  backgroundColor: "red", // Rojo para el botón de eliminar
+  padding: 10,
+  borderRadius: 8,
+  alignItems: "center",
+},
+deleteButtonText: {
+  color: "#fff", // Texto blanco para el botón de eliminar
+  fontSize: 14,
+  fontWeight: "bold",
+},
 });
 
 export default PieceListScreen;
